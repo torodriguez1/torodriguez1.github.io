@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Rodriguez</title>
+    <link rel="icon" href="your-icon.png" type="image/png"> <!-- Substituir "your-icon.png" pelo caminho para o ícone personalizado -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Ajuste para deixar o cabeçalho mais baço */
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .translate-button {
+            background-color: #888; /* Cor cinzenta */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+
+        section {
+            max-width: 1200px; /* Aumentado para uma melhor visualização */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza a área dos vídeos */
+        }
+
+        .video-container .video-item {
+            max-width: 45%; /* Ajustado para se adaptar melhor */
+            margin: 10px;
+        }
+
+        .video-container h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .video-container p {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .video-container video {
+            width: 100%;
+            border: 2px solid #fff;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9); /* Rodapé mais destacado */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0; /* Aumentado para mais destaque */
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 id="title">Tomás Rodriguez</h1>
+    <p id="description">Explore my work in sound design for films, games, and more.</p>
+    <button class="translate-button" onclick="translatePage()">Translate to Portuguese</button>
+</header>
+
+<section>
+    <h2 id="work-title">Projects</h2>
+    <div class="video-container">
+        <div class="video-item">
+            <h3>Sound design de jogo de Unity</h3>
+            <p>Gameplay with complete sound design for an adventure game.</p>
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="video-item">
+            <h3>Sound design for a Unity game</h3>
+            <p>Gameplay with sound design for a futuristic shooter game.</p>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="video-item">
+            <h3>Character sound design</h3>
+            <p>Sound design for a League of Legends character (Pantheon).</p>
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="video-item">
+            <h3>Sound design for a robot</h3>
+            <p>Sound design for a futuristic robot.</p>
+            <video controls>
+                <source src="video4.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="video-item">
+            <h3>Character sound design</h3>
+            <p>Sound design for a warrior and two other warriors.</p>
+            <video controls>
+                <source src="video5.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="video-item">
+            <h3>Sound design for a game trailer</h3>
+            <p>Trailer for an adventure MMO game called Chrono Odyssey.</p>
+            <video controls>
+                <source src="video6.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p id="contact">Contact me: <a href="mailto:torodriguez11971@gmail.com">torodriguez11971@gmail.com</a></p>
+    <p id="follow">Follow me on social media:
+        <a href="https://www.linkedin.com/in/tom%C3%A1s-rodriguez-b28847302/" target="_blank">LinkedIn</a>
+    </p>
+</footer>
+
+<script>
+    let isTranslated = false;
+
+    function translatePage() {
+        const title = document.getElementById('title');
+        const description = document.getElementById('description');
+        const workTitle = document.getElementById('work-title');
+        const contact = document.getElementById('contact');
+        const follow = document.getElementById('follow');
+        const videoTitles = document.querySelectorAll('.video-item h3');
+        const videoDescriptions = document.querySelectorAll('.video-item p');
+        const translateButton = document.querySelector('.translate-button');
+
+        if (!isTranslated) {
+            title.innerHTML = "Tomás Rodriguez";
+            description.innerHTML = "Explora os meus trabalhos em sound design para filmes, jogos e mais.";
+            workTitle.innerHTML = "Projetos";
+            contact.innerHTML = "Contacta-me: <a href='mailto:torodriguez11971@gmail.com'>torodriguez11971@gmail.com</a>";
+            follow.innerHTML = "Segue-me nas redes sociais: <a href='https://www.linkedin.com/in/tom%C3%A1s-rodriguez-b28847302/' target='_blank'>LinkedIn</a>";
+            videoTitles[0].innerHTML = "Sound design de jogo de Unity";
+            videoDescriptions[0].innerHTML = "Gameplay com sound design completo para um jogo de aventura.";
+            videoTitles[1].innerHTML = "Sound design para um jogo Unity";
+            videoDescriptions[1].innerHTML = "Gameplay com sound design para um jogo de tiro futurista.";
+            videoTitles[2].innerHTML = "Sound design de personagem";
+            videoDescriptions[2].innerHTML = "Sound design para um personagem de League of Legends (Pantheon).";
+            videoTitles[3].innerHTML = "Sound design para um robô";
+            videoDescriptions[3].innerHTML = "Sound design para um robô futurista.";
+            videoTitles[4].innerHTML = "Sound design de personagem";
+            videoDescriptions[4].innerHTML = "Sound design para um guerreiro e dois outros guerreiros.";
+            videoTitles[5].innerHTML = "Sound design para trailer de jogo";
+            videoDescriptions[5].innerHTML = "Trailer de um jogo MMO de aventura chamado Chrono Odyssey.";
+            translateButton.innerText = "Translate to English";
+            isTranslated = true;
+        } else {
+            title.innerHTML = "Tomás Rodriguez";
+            description.innerHTML = "Explore my work in sound design for films, games, and more.";
+            workTitle.innerHTML = "Projects";
+            contact.innerHTML = "Contact me: <a href='mailto:torodriguez11971@gmail.com'>torodriguez11971@gmail.com</a>";
+            follow.innerHTML = "Follow me on social media: <a href='https://www.linkedin.com/in/tom%C3%A1s-rodriguez-b28847302/' target='_blank'>LinkedIn</a>";
+            videoTitles[0].innerHTML = "Sound design de jogo de Unity";
+            videoDescriptions[0].innerHTML = "Gameplay with complete sound design for an adventure game.";
+            videoTitles[1].innerHTML = "Sound design for a Unity game";
+            videoDescriptions[1].innerHTML = "Gameplay with sound design for a futuristic shooter game.";
+            videoTitles[2].innerHTML = "Character sound design";
+            videoDescriptions[2].innerHTML = "Sound design for a League of Legends character (Pantheon).";
+            videoTitles[3].innerHTML = "Sound design for a robot";
+            videoDescriptions[3].innerHTML = "Sound design for a futuristic robot.";
+            videoTitles[4].innerHTML = "Character sound design";
+            videoDescriptions[4].innerHTML = "Sound design for a warrior and two other warriors.";
+            videoTitles[5].innerHTML = "Sound design for a game trailer";
+            videoDescriptions[5].innerHTML = "Trailer for an adventure MMO game called Chrono Odyssey.";
+            translateButton.innerText = "Translate to Portuguese";
+            isTranslated = false;
+        }
+    }
+</script>
+
+</body>
+</html>
