@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Rodriguez - Sound Design Portfolio</title>
+    <link rel="icon" href="your-icon-link-here.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tomás Rodriguez</h1>
+        <p>Sound Design Portfolio</p>
+        <button id="translateBtn" onclick="translatePage()">Translate to Portuguese</button>
+    </header>
+
+    <main>
+        <section class="video-section">
+            <div class="video-item">
+                <h2>Sound Design for a Unity Game</h2>
+                <p>Gameplay with complete sound design for an adventure game.</p>
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-item">
+                <h2>Sound Design for a Unity Game</h2>
+                <p>Gameplay with sound design for a futuristic shooter game.</p>
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-item">
+                <h2>Character Sound Design</h2>
+                <p>Sound design for a League of Legends character (Pantheon).</p>
+                <video controls>
+                    <source src="video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-item">
+                <h2>Sound Design for a Robot</h2>
+                <p>Sound design for a futuristic robot.</p>
+                <video controls>
+                    <source src="video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-item">
+                <h2>Character Sound Design</h2>
+                <p>Sound design for a warrior and two other warriors.</p>
+                <video controls>
+                    <source src="video5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-item">
+                <h2>Sound Design for a Game Trailer</h2>
+                <p>Trailer for an adventure MMO game called Chrono Odyssey.</p>
+                <video controls>
+                    <source src="video6.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: <a href="mailto:torodriguez11971@gmail.com">torodriguez11971@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/tom%C3%A1s-rodriguez-b28847302/" target="_blank">Tomás Rodriguez</a></p>
+    </footer>
+
+    <script>
+        let isEnglish = true;
+
+        function translatePage() {
+            const translateBtn = document.getElementById('translateBtn');
+            const titles = document.querySelectorAll('.video-item h2');
+            const descriptions = document.querySelectorAll('.video-item p');
+
+            if (isEnglish) {
+                titles[0].textContent = 'Design de Som para Jogo Unity';
+                descriptions[0].textContent = 'Gameplay com design completo de som para um jogo de aventura.';
+                titles[1].textContent = 'Design de Som para um Jogo Unity';
+                descriptions[1].textContent = 'Gameplay com design de som para um jogo de tiro futurista.';
+                titles[2].textContent = 'Design de Som para Personagem';
+                descriptions[2].textContent = 'Design de som para um personagem de League of Legends (Pantheon).';
+                titles[3].textContent = 'Design de Som para um Robô';
+                descriptions[3].textContent = 'Design de som para um robô futurista.';
+                titles[4].textContent = 'Design de Som para Personagem';
+                descriptions[4].textContent = 'Design de som para um guerreiro e dois outros guerreiros.';
+                titles[5].textContent = 'Design de Som para Trailer de Jogo';
+                descriptions[5].textContent = 'Trailer de um jogo MMO de aventura chamado Chrono Odyssey.';
+                translateBtn.textContent = 'Translate to English';
+                isEnglish = false;
+            } else {
+                titles[0].textContent = 'Sound Design for a Unity Game';
+                descriptions[0].textContent = 'Gameplay with complete sound design for an adventure game.';
+                titles[1].textContent = 'Sound Design for a Unity Game';
+                descriptions[1].textContent = 'Gameplay with sound design for a futuristic shooter game.';
+                titles[2].textContent = 'Character Sound Design';
+                descriptions[2].textContent = 'Sound design for a League of Legends character (Pantheon).';
+                titles[3].textContent = 'Sound Design for a Robot';
+                descriptions[3].textContent = 'Sound design for a futuristic robot.';
+                titles[4].textContent = 'Character Sound Design';
+                descriptions[4].textContent = 'Sound design for a warrior and two other warriors.';
+                titles[5].textContent = 'Sound Design for a Game Trailer';
+                descriptions[5].textContent = 'Trailer for an adventure MMO game called Chrono Odyssey.';
+                translateBtn.textContent = 'Translate to Portuguese';
+                isEnglish = true;
+            }
+        }
+    </script>
+</body>
+</html>
